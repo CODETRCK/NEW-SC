@@ -29,7 +29,8 @@ IZIN=$( curl https://raw.githubusercontent.com/CODETRCK/ipsec/main/ipsec
 if [ $MYIP = $IZIN ]; then
 clear
 echo -e ""
-else echo "You're not Allowed to use this script"
+else
+echo "You're not Allowed to use this script"
 exit 0
 fi
 
