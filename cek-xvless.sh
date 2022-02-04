@@ -4,7 +4,6 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-#EDIT IZIN
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/vlesstls.json | grep '^###' | cut -d ' ' -f 2`);

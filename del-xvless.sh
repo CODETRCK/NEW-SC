@@ -4,7 +4,6 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-#EDIT IZIN
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/vlesstls.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then

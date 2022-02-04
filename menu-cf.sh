@@ -14,7 +14,6 @@ Lyellow='\e[93m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-#EDIT IZIN
 clear
 echo -e  "$PURPLE  .-------------------------------------------------------."
 echo -e  "$PURPLE  |                      $Blink $yell  Domain Menu$NC                   $PURPLE|"

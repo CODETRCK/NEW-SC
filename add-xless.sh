@@ -4,7 +4,6 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-# EDIT IZIN
 clear
 source /var/lib/premium-script/ipvps.conf
 domain=$(cat /etc/v2ray/domain)
