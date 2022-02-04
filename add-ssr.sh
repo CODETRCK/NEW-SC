@@ -1,4 +1,16 @@
 #!/bin/bash
+echo "Checking VPS"
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/CODETRCK/ipsec/main/ipsec
+| grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e ""
+else
+echo "You're not Allowed to use this script"
+exit 0
+fi
+
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Please enter the username you want to set (do not repeat, does not support Chinese, will be reported incorrect!)"
 read -e -p "(Default: ):" ssr_user
