@@ -1,4 +1,17 @@
+
 #!/bin/bash
+echo "Checking VPS"
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/CODETRCK/ipsec/main/ipsec
+| grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e ""
+else
+echo "You're not Allowed to use this script"
+exit 0
+fi
+
 IP=$(wget -qO- ipinfo.io/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
