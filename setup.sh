@@ -36,16 +36,7 @@ fi
 
 else
 clear
-echo "sila contact admin untuk premium"
-rm -f setup.sh
 
-echo '                   Wellcome User....                      '
-echo '                                                          '
-echo '                                                          '
-echo '                                                          '
-echo '             AutoScript By SSH SEDANG NETWORK             '
-echo '              Telegram : t.me/sshsedang4                  '
-sleep 20
 exit 0
 fi
 echo '============================================='
