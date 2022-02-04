@@ -22,7 +22,17 @@ fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
+echo "Checking VPS"
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/CODETRCK/ipsec/main/ipsec
+| grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e ""
+else echo "You're not Allowed to use this script"
+exit 0
 fi
+
 else
 clear
 echo "sila contact admin untuk premium"
